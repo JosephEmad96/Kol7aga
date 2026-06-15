@@ -2,27 +2,172 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Kol7aga | كل حاجة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kol7aga | كل حاجة</title>    
     <style>
-        body { font-family: 'Tajawal', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f4; }
-        .container { text-align: center; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        p { color: #666; }
+        /* التنسيقات العامة */
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; /* changed from height to min-height to allow scrolling */
+            margin: 0; 
+            background-color: #f4f4f4; 
+            padding: 20px;
+        }
+        
+        .container { 
+            text-align: center; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            max-width: 800px;
+            width: 100%;
+        }
+
+                /* تنسيق الحاوية اللي شايلاهم */
+        .gallery-container {
+            display: flex;            /* تفعيل نظام الفليكس عشان يجيبهم جمب بعض */
+            justify-content: center;  /* توسيط الـ 3 صور في نص الـ Box بالضبط */
+            gap: 15px;                /* مسافة مظبوطة وثابتة بين كل صورة والتانية */
+            margin: 25px 0;           /* مسافة فوق وتحت المجموعة كلها */
+            width: 100%;
+        }
+
+        /* تنسيق الصور نفسها جوه الحاوية */
+        .gallery-container img {
+            width: 30%;               /* كل صورة بتاخد تلت العرض المتاح عشان ييجوا جمب بعض */
+            max-width: 250px;         /* حد أقصى لعرض الصورة عشان شكلها ميبوظش على الشاشات الكبيرة */
+            height: auto;             /* الحفاظ على أبعاد الصورة ونسبها بدون تمطيط */
+            border-radius: 8px;       /* الحواف الدائرية الناعمة اللي كنت حاططها */
+            border: 1px solid #ddd;   /* إطار خفيف يحدد شكل الصور (اختياري) */
+        }
+
+        h1 { color: #333; margin-bottom: 5px;}
+        h2 { color: #444; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;}
+        p { color: #666; line-height: 1.6; font-size: 16px; }
+        
+        /* تنسيقات الروابط والأيقونات */
+        .social-links {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .social-links a:hover { color: #003d82; }
+
+        /* تنسيقات قسم القصة والصور */
+        .story-section {
+            text-align: right; /* المحاذاة لليمين لقراءة مريحة بالعربي */
+            margin-top: 30px;
+        }
+        
+        .image-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #999; font-size: 14px; text-align: center;}
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Kol7aga</h1>
-        <p>جاري العمل على موقعنا الجديد... انتظرونا قريباً!</p>
-        <a href="https://wa.me/01220687806" target="_blank">تواصل معي على واتساب</a>
-        <iconify-icon name="whatsapp" width="24" height="24">☎</iconify-icon><br>
-        <a href="https://www.facebook.com/Joseph.Joe23" target="_blank">حسابي على فيسبوك</a>
-        <iconify-icon name="instagram" width="24" height="24">📸</iconify-icon>
+        <img src="/IMG_20260508_214539.jpg" alt="صورتي الشخصية" style="width: 350px; height: 350px; border-radius: 50%; margin-bottom: 20px;">
+        <h1>www.Kol7aga.net</h1>
+        <h2>جاري العمل على موقعنا الجديد... انتظرونا قريباً!</h2>
+
+        <div class="social-links">
+            <a href="https://wa.me/201220687806" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #25D366; font-weight: bold; margin-bottom: 15px;">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.219 0-5.836 2.617-5.836 5.836 0 1.031.266 2.031.766 2.906l-.516 1.875 1.922-.516c.828.453 1.781.688 2.766.688 3.219 0 5.836-2.617 5.836-5.836 0-3.219-2.617-5.836-5.836-5.836zm0 10.594c-.875 0-1.734-.234-2.484-.672l-.188-.109-1.375.375.375-1.328-.125-.188c-.5-0.781-.766-1.703-.766-2.656 0-2.813 2.281-5.094 5.094-5.094s5.094 2.281 5.094 5.094c0 2.813-2.281 5.094-5.094 5.094zm2.797-3.797c-.156-.078-.922-.453-1.063-.5-.141-.063-.25-.094-.359.078-.109.172-.422.531-.516.641-.094.109-.188.125-.344.047-.156-.078-.656-.234-1.25-0.766-.469-.422-.781-.938-.875-1.125-.094-.188-.009-.281.078-.375.078-.078.172-.203.266-.313.094-.109.125-.188.188-.313.063-.125.031-.234-.016-.328-.047-.094-.422-1.016-.578-1.391-.141-.359-.281-.313-.391-.313h-.328c-.109 0-.281.047-.422.188s-.531.516-.531 1.25c0 .734.547 1.438.625 1.547.078.109 1.078 1.656 2.625 2.313.359.156.641.25.859.328.359.125.688.109.953.063.297-.047.922-.375 1.047-.734.125-.359.125-.672.094-.719-.031-.047-.094-.078-.25-.156z"/></svg>
+            تواصل معي على واتساب
+            </a>
+            
+            <a href="https://www.facebook.com/Joseph.Joe23" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1877F2; font-weight: bold;">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.013 3.672 9.163 8.469 9.907v-7.007H7.875v-2.9h2.594V9.625c0-2.564 1.527-3.984 3.868-3.984 1.121 0 2.293.2 2.293.2v2.522h-1.292c-1.272 0-1.668.791-1.668 1.602v1.922h2.845l-.454 2.9h-2.391v7.007C18.328 21.163 22 17.013 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            حسابي على فيسبوك
+            </a>
+            <br>
+            <a href="+201220687806" target="_blank">
+                للتواصل معي هاتفياً
+                <iconify-icon name="whatsapp" width="24" height="24">☎</iconify-icon>
+            </a>
+        </div>
+
+        <div class="story-section">
+            <h1>بفكر أعمل أيه بالموقع :</h1>
+            <h3>أن شاء الله هصنع منتجات جلدية من البيت زي المحافظ و الأحزمة و حامل الكروت</h3>
+            <p>
+                و كمان منتجات أخرى زي الهاند ميد و الشمع المعطر و لو في حد بيشتغل شغل من البيت
+                و عايز يبيع منتجاته من خلال الموقع ده يبعتلي على الواتساب و هساعده في التسويق و البيع و التوصيل
+            </p>
+
+            <h2>أسم البراند JoeMan</h2>
+
+            <div class="gallery-container">
+                <img src="/Wallets.png" alt="محافظ جلدية">
+                <img src="/Belts.png" alt="أحزمة جلدية">
+                <img src="/Card Holders.png" alt="حامل كروت جلدية">
+            </div>
+
+
+            <h2>دومين JoeHome</h2>
+            <p>كان معايا دومين اسمه <strong>joehome.xyz</strong> وحالياً بفكر أجدده عشان أحافظ عليه، ودي صورة من لوحة التحكم لتجديد الدومين:</p>
+            <div class="image-box">
+                <img src="joehome.png" alt="تجديد دومين joehome.xyz">
+            </div>
+
+            <h2>الاستحواذ على Kol7aga.net</h2>
+            <p>أما الموقع اللي اسمه <strong>kol7aga.net</strong> ده أنا لسه شاريه طازة.</p>
+            <p>ودي صورة بتوضح سعره قبل ما أشتريه من على موقع Spaceship:</p>
+            <div class="image-box">
+                <img src="/Kol7aga before buy.png" alt="سعر الدومين قبل الشراء">
+            </div>
+
+            <p>ودي خطوة توثيق الدفع باستخدام الفيزا:</p>
+            <div class="image-box">
+                <img src="/kol7aga Buying.png" alt="الدفع لشراء الدومين">
+            </div>
+
+            <p>ودا الإيصال النهائي بعد ما تميت الشراء بنجاح:</p>
+            <div class="image-box">
+                <img src="My Receipt.png" alt="إيصال الدفع">
+            </div>
+
+            <p>ومن الحاجات اللي تأكد إنها كانت صفقة ممتازة، إن الدومين الـ <strong>.com</strong> (Kolhaga.com) معروض للبيع أو الإيجار بأسعار خيالية جداً زي ما واضح هنا:</p>
+            <h3>Kol7aga.net (للبيع أو للإيجار) دا اللي ناوي أعمله لو معرفتش أبيع و أستخدم الموقع</h3>
+            <div class="image-box">
+                <h1>سعر البيع 895$</h1>
+                <img src="kolhaga for sell.png" alt="دومين kolhaga.com للبيع">
+                <h1>سعر الإيجار 38$ شهرياً</h1>
+                <img src="kolhaga for Lease.png" alt="دومين kolhaga.com للإيجار">
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Kol7aga. جميع الحقوق محفوظة.</p>
+            <h1>المالك الشخصي : جوزيف عماد سلامة</h1>
+        </footer>
     </div>
+
 </body>
-
-<footer>
-    <!-- <p style="text-align: center; margin-top: 20px; ">&copy; 2024 Kol7aga. جميع الحقوق محفوظة.</p> -->
-</footer>
-
 </html>
