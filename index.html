@@ -13,6 +13,428 @@
             align-items: center; 
             min-height: 100vh; 
             margin: 0; 
+            /* خلفية الموقع - أسود ليلي مريح */
+            background-color: #0f0f11; 
+            padding: 20px;
+        }
+        
+        .container { 
+            text-align: center; 
+            background: #1a1a1d; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* تعديل ألوان الخطوط الافتراضية لتناسب الدارك مود */
+        h1 { color: #ffffff; margin-bottom: 5px;}
+        h2 { color: #ffffff; border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 40px;}
+        h3 { color: #cccccc; }
+        p { color: #e0e0e0; line-height: 1.6; font-size: 16px; }
+        
+        .profile-pic {
+            width: 200px;
+            height: 250px;
+            border-radius: 50%;
+            border: 3px solid #444; /* إطار الصورة أغمق */
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            align-self: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            object-fit:contain;
+        }
+        
+        /* تنسيقات الروابط والأيقونات */
+        .social-links {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            font-size: larger;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #ffffff; /* لون الروابط الافتراضي أبيض */
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .social-links a:hover { opacity: 0.8; }
+
+        /* تنسيقات قسم القصة والصور */
+        .story-section {
+            text-align: right; 
+            margin-top: 30px;
+        }
+        
+        .image-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #444;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; color: #777; font-size: 14px; text-align: center;}
+        
+        /* === تنسيقات التجاوب مع الموبايل === */
+        @media (max-width: 768px) {
+            body {
+                align-items: flex-start;
+                padding: 10px;
+            }
+            .container {
+                padding: 20px 15px;
+                box-sizing: border-box;
+            }
+            .gallery-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery-container img {
+                width: 100%;
+                max-width: 280px;
+            }
+            .story-section {
+                padding: 0 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- الحاوية بنفس استايلها واستدارتها 120px ولكن بخلفية رمادي داكن جداً -->
+    <div class="container" style="background-color: #1a1a1d;
+     padding: 40px;
+      border-radius: 120px;
+       box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        max-width: auto;
+         width: 100%;
+          transition: box-shadow 0.3s ease;">
+        <img src="/MyPhoto.webp" alt="صورتي الشخصية" class="profile-pic" >
+
+        <!-- لون البراند ذهبي/برتقالي فخم جداً على الأسود -->
+        <h1 style="text-align: center; color: #f39c12; font-size: 32px; margin-bottom: 10px;  font-weight: bold; text-decoration-thickness: 3px; text-underline-offset: 5px; text-shadow: 1px 1px 5px rgba(243, 156, 18, 0.3); transition: color 0.3s ease, text-shadow 0.3s ease; ">
+            www.Kol7aga.net
+        </h1>
+        <h2 style="font-size: 24px; color: #ffffff;" >انتظرونا قريباً..!</h2>
+
+       
+        <div class="story-section">
+            <h1 style="text-align: right; color: #ffffff; font-size: 25px; margin-bottom: 10px; font-weight: bold; text-decoration-thickness: 3px; text-underline-offset: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); transition: color 0.3s ease, text-shadow 0.3s ease;">
+                ايه الموقع دا :
+            </h1>
+            <h3 style="text-align: right; color: #cccccc; font-size: 20px; margin-bottom: 10px;">
+                للبيع والتسويق من البيت
+            </h3>
+            
+            <!-- صندوق الوصف بخلفية داكنة وظل أسود قوي ليظهر كأنه بارز -->
+            <p style="text-align: right; margin-top: 10px;
+             line-height: 2; font-size: 20px;
+              color: #e0e0e0; 
+               max-width: 700px; margin-left: auto;
+                margin-right: auto; box-shadow: -10px 10px 0px rgba(0,0,0,0.6);
+                 padding: 15px; border-radius: 8px; background-color: #222222;
+                  border: 1px solid #444; transition: box-shadow 0.3s ease; font-family: 'Tajawal', sans-serif; font-weight: 600; text-align: center;">
+                
+                منتجات زي الهاند ميد والشمع المعطر و المحافظ الجلدية
+                <br>ولو في حد بيشتغل شغل من البيت
+                وعايز يبيع منتجاته من خلال الموقع ده يبعتلي على الواتساب وهساعده في التسويق والبيع والتوصيل.
+                <br>أول 6 شهور هتكون تجربة مجانية، وبعد كده هتكون الاشتراكات رمزية جداً.
+
+            </p>
+
+        </div>
+
+        <br>
+
+         <div class="social-links">
+            <a href="https://wa.me/201220687806" target="_blank" style="color: #25D366; display: inline-flex; align-items: center; gap: 8px; font-weight: bold;">
+                <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg> تواصل معي على واتساب </a>
+
+            <a href="https://www.facebook.com/Joseph.Joe23" target="_blank" style="color: #4dabf7;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.013 3.672 9.163 8.469 9.907v-7.007H7.875v-2.9h2.594V9.625c0-2.564 1.527-3.984 3.868-3.984 1.121 0 2.293.2 2.293.2v2.522h-1.292c-1.272 0-1.668.791-1.668 1.602v1.922h2.845l-.454 2.9h-2.391v7.007C18.328 21.163 22 17.013 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                حسابي على فيسبوك
+            </a>
+
+            <a href="tel:+201220687806" style="color: #ffffff;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                للتواصل معي هاتفياً
+            </a>
+        </div>
+
+        <footer>
+            <h1 style="color: #f39c12; font-size: 30px; margin:auto; text-shadow: 1px 1px 5px rgba(243, 156, 18, 0.3); transition: color 0.3s ease, text-shadow 0.3s ease; font-family: 'Tajawal', sans-serif; font-weight: bold; text-align: center;border: none;">    
+            جوزيف عماد سلامة
+            </h1>
+
+            <p>&copy; 2026 Kol7aga. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kol7aga | كل حاجة</title>    
+    <style>
+        /* استيراد خط تجوال من جوجل فونتس لمزيد من الأناقة */
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+        /* التنسيقات العامة */
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            /* خلفية متدرجة ناعمة وعصرية */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .container { 
+            text-align: center; /* لوسطنة الدنيا داخلياً */
+            background: #ffffff; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            max-width: 800px;
+            width: 100%;
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* تنسيق الصورة زي ما كانت بالظبط */
+        .profile-pic {
+            width: 200px;
+            height: 250px;
+            border-radius: 50%;
+            border: 3px solid #ddd; /* الإطار القديم */
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            align-self: center;
+            object-fit: contain; /* الخاصية القديمة */
+            margin-bottom: 20px;
+        }
+
+        /* تنسيقات العناوين والنصوص (تم توسيطها جميعاً) */
+        .brand-title {
+            color: #E67E22; /* برتقالي دافئ ومميز */
+            font-size: 36px; 
+            margin-bottom: 5px; 
+            font-weight: 800; 
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+            text-align: center; /* توسيط */
+        }
+
+        .sub-title {
+            color: #2C3E50; /* كحلي داكن احترافي */
+            font-size: 24px;
+            margin-top: 0;
+            font-weight: 500;
+            text-align: center; /* توسيط */
+        }
+
+        .section-title {
+            color: #2C3E50; 
+            font-size: 26px; 
+            margin-top: 40px;
+            margin-bottom: 10px; 
+            font-weight: 700;
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 10px;
+            text-align: center; /* توسيط */
+        }
+
+        .section-subtitle {
+            text-align: center; /* توسيط */
+            color: #E67E22; 
+            font-size: 20px; 
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .info-box {
+            text-align: center; /* توسيط النص الداخلي */
+            line-height: 1.8; 
+            font-size: 18px;
+            color: #444; 
+            background-color: #F8F9FA; 
+            padding: 20px; 
+            border-radius: 8px; 
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            /* تم حذف خط الجانب لزيادة التناسق بعد التوسيط */
+        }
+
+        /* تنسيقات الروابط والأيقونات */
+        .social-links {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center; /* لوسطنة الأزرار نفسها */
+            font-size: 18px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            width: 80%;
+            max-width: 350px;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .social-links a.whatsapp { color: #25D366; }
+        .social-links a.facebook { color: #1877F2; }
+        .social-links a.phone { color: #555; }
+
+        .social-links a:hover { 
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+
+        /* تنسيق الفوتر */
+        footer { 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid #eee; 
+            text-align: center;
+        }
+        
+        .owner-name {
+            color: #E67E22; 
+            font-size: 28px; 
+            margin: 10px auto; 
+            font-weight: 800; 
+        }
+
+        .copyright {
+            color: #999; 
+            font-size: 14px;
+        }
+
+        /* === تنسيقات التجاوب مع الموبايل === */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 30px 20px;
+            }
+            /* تصغير حجم الصورة للموبايل */
+            .profile-pic {
+                width: 150px;
+                height: 187.5px;
+            }
+            .brand-title {
+                font-size: 28px;
+            }
+            .info-box {
+                font-size: 16px;
+                padding: 15px;
+            }
+            .social-links a {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="/MyPhoto.webp" alt="صورتي الشخصية" class="profile-pic">
+
+        <h1 class="brand-title">www.Kol7aga.net</h1>
+        <h2 class="sub-title">انتظرونا قريباً..!</h2>
+
+        <div class="story-section">
+            <h2 class="section-title">ايه الموقع دا:</h2>
+            <h3 class="section-subtitle">للبيع والتسويق من البيت</h3>
+            
+            <div class="info-box">
+                منتجات زي الهاند ميد والشمع المعطر والمحافظ الجلدية.
+                <br><br>
+                لو في حد بيشتغل شغل من البيت وعايز يبيع منتجاته من خلال الموقع ده، يبعتلي على الواتساب وهساعده في التسويق والبيع والتوصيل.
+                <br><br>
+                <strong>أول 6 شهور هتكون تجربة مجانية،</strong> وبعد كده هتكون الاشتراكات رمزية جداً.
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://wa.me/201220687806" target="_blank" class="whatsapp">
+                <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg> 
+                تواصل معي على واتساب 
+            </a>
+
+            <a href="https://www.facebook.com/Joseph.Joe23" target="_blank" class="facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.013 3.672 9.163 8.469 9.907v-7.007H7.875v-2.9h2.594V9.625c0-2.564 1.527-3.984 3.868-3.984 1.121 0 2.293.2 2.293.2v2.522h-1.292c-1.272 0-1.668.791-1.668 1.602v1.922h2.845l-.454 2.9h-2.391v7.007C18.328 21.163 22 17.013 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                حسابي على فيسبوك
+            </a>
+
+            <a href="tel:+201220687806" class="phone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                للتواصل معي هاتفياً
+            </a>
+        </div>
+
+        <footer>
+            <h1 class="owner-name">جوزيف عماد سلامة</h1>
+            <p class="copyright">&copy; 2026 Kol7aga. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kol7aga | كل حاجة</title>    
+    <style>
+        /* التنسيقات العامة */
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
             /* background-color: #f4f4f4;  */
             background-color: #f4f4f4; 
             padding: 20px;
@@ -177,10 +599,9 @@
 
         <footer>
             
-<!--             
             <h2 style="color: #000000; font-size: 25px; margin:auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); transition: color 0.3s ease, text-shadow 0.3s ease; font-family: 'Tajawal', sans-serif; font-weight: bold; text-align: center;border: none;">
                 المالك الشخصي
-            </h2> -->
+            </h2> 
 
             <h1 style="color: #ff7700; font-size: 30px; margin:auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); transition: color 0.3s ease, text-shadow 0.3s ease; font-family: 'Tajawal', sans-serif; font-weight: bold; text-align: center;border: none;">    
             جوزيف عماد سلامة
@@ -191,9 +612,7 @@
     </div>
 
 </body>
-</html>
-
-
+</html> -->
 
 
 <!-- 
